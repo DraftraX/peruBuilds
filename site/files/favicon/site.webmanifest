@@ -1,0 +1,19 @@
+{
+    "name": "Corwin",
+    "short_name": "Corwin",
+    "icons": [
+        {
+            "src": "/files/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/files/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#e5e8ef",
+    "background_color": "#e5e8ef",
+    "display": "standalone"
+}

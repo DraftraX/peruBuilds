@@ -1,0 +1,15 @@
+{
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/", "destination": "/site/en.html" },
+    { "source": "/index.html", "destination": "/site/en.html" },
+    { "source": "/en.html", "destination": "/site/en.html" },
+    { "source": "/en", "destination": "/site/en.html" },
+    { "source": "/nosotros.html", "destination": "/site/nosotros.html" },
+    { "source": "/proyecto.html", "destination": "/site/proyecto.html" },
+    { "source": "/nosotros", "destination": "/site/nosotros.html" },
+    { "source": "/proyecto", "destination": "/site/proyecto.html" },
+    { "source": "/(files|templates|preview-file|modules|pages|lib|en|_external)/(.*)", "destination": "/site/$1/$2" },
+    { "source": "/(.*)", "destination": "/site/$1" }
+  ]
+}

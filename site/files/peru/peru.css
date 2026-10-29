@@ -1,0 +1,73 @@
+/* PERU BUILDS: ajustes mínimos sobre los estilos originales */
+
+/* El carrusel original calcula el ancho del escenario según el número de tarjetas (eran 3);
+   con un solo proyecto la tarjeta debe ocupar todo el ancho, como en el original */
+section[module=Projects][template=Top] [component=Slider] [block=slider] .owl-stage {
+    width: 100% !important;
+}
+
+/* "nuestro PROYECTO" es más largo que "our PROJECTS": tamaños propios para [lang=es],
+   igual que el original define variantes para [lang=sk] */
+section[module=Projects][template=Top] [container=header][lang=es] [block=header] h2 i {
+    font-size: 14.6vw;
+}
+section[module=Projects][template=Top] [container=header][lang=es] [block=header] h2 span {
+    font-size: 9.9vw;
+}
+@media (orientation: portrait) and (max-width: 640px) {
+    section[module=Projects][template=Top] [container=header][lang=es] [block=header] h2 i {
+        font-size: 30vw;
+        margin-right: 8%;
+    }
+    section[module=Projects][template=Top] [container=header][lang=es] [block=header] h2 span {
+        font-size: 17vw;
+    }
+}
+
+/* "nuestro ENFOQUE INMOBILIARIO": misma composición que "our SUSTAINABLE PERFORMANCE" */
+[container=headline].home[lang=es] h2 i {
+    font-size: 15.6vw;
+}
+[container=headline].home[lang=es] h2 span b:first-child {
+    font-size: 13.6vw;
+}
+@media (orientation: portrait) and (max-width: 640px) {
+    [container=headline].home[lang=es] h2 i {
+        font-size: 30vw;
+        margin-right: 8%;
+        margin-left: 0;
+    }
+}
+
+/* "nuestros VALORES" (Nosotros): misma composición que "our VALUES" */
+[container=headline].value[lang=es] h2 { font-size: 10.2vw; }
+[container=headline].value[lang=es] h2 i { font-size: 14.5vw; margin-left: -1%; }
+@media (orientation: portrait) and (max-width: 640px) {
+    [container=headline].value[lang=es] h2 i { font-size: 30vw; line-height: .68; margin-right: 8%; }
+    [container=headline].value[lang=es] h2 span { font-size: 19vw; margin-top: -7%; }
+}
+
+/* Visor 360 de Aledaños */
+.pano-viewer {
+    position: fixed; inset: 0; z-index: 2147483000; display: flex; flex-direction: column;
+    background: #0A2E4E; opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s;
+}
+.pano-viewer.visible { opacity: 1; visibility: visible; }
+.pano-viewer__bar {
+    display: flex; align-items: center; gap: 24px; height: 72px; padding: 0 24px 0 40px; flex: none;
+    color: #fff; font-family: CircularMedium, Arial, sans-serif;
+}
+.pano-viewer__title { font-size: 24px; line-height: 32px; }
+.pano-viewer__hint { font-size: 14px; opacity: .6; margin-right: auto; }
+.pano-viewer__close { width: 48px; height: 48px; border: 0; border-radius: 50%; background: #1F8EAA; color: #fff; font-size: 30px; line-height: 1; cursor: pointer; }
+#pano-stage { flex: 1; }
+@media (max-width: 740px) {
+    .pano-viewer__bar { padding: 0 16px; height: 64px; }
+    .pano-viewer__title { font-size: 18px; }
+    .pano-viewer__hint { display: none; }
+}
+
+/* Imagen provisional del banner de contacto (la original era una fotografía de Corwin) */
+[container=contactBanner] [block=right] [element=image] {
+    background-image: url(img/contacto.svg);
+}

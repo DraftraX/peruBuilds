@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+
+# Vercel
+.vercel
+
+# Environment variables
+.env
+.env*.local
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
