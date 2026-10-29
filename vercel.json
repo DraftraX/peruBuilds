@@ -1,5 +1,4 @@
 {
-  "cleanUrls": false,
   "rewrites": [
     { "source": "/", "destination": "/site/en.html" },
     { "source": "/index.html", "destination": "/site/en.html" },
@@ -9,7 +8,13 @@
     { "source": "/proyecto.html", "destination": "/site/proyecto.html" },
     { "source": "/nosotros", "destination": "/site/nosotros.html" },
     { "source": "/proyecto", "destination": "/site/proyecto.html" },
-    { "source": "/(files|templates|preview-file|modules|pages|lib|en|_external)/(.*)", "destination": "/site/$1/$2" },
-    { "source": "/(.*)", "destination": "/site/$1" }
+    { "source": "/templates/:path*", "destination": "/site/templates/:path*" },
+    { "source": "/files/:path*", "destination": "/site/files/:path*" },
+    { "source": "/preview-file/:path*", "destination": "/site/preview-file/:path*" },
+    { "source": "/modules/:path*", "destination": "/site/modules/:path*" },
+    { "source": "/pages/:path*", "destination": "/site/pages/:path*" },
+    { "source": "/lib/:path*", "destination": "/site/lib/:path*" },
+    { "source": "/en/:path*", "destination": "/site/en/:path*" },
+    { "source": "/_external/:path*", "destination": "/site/_external/:path*" }
   ]
 }
